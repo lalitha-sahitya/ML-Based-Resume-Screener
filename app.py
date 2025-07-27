@@ -43,8 +43,6 @@ uploaded_file=st.file_uploader("Upload Resume(pdf)", type=["pdf"])
 if uploaded_file:
     with pdfplumber.open(uploaded_file) as pdf:
         text=''.join(page.extract_text() for page in pdf.pages)
-    
-    st.subheader('Resume Preview')
     cleaned=clean_text(text)
     sequence = tokenizer.texts_to_sequences([cleaned])
     padded = pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding='post', truncating='post')
