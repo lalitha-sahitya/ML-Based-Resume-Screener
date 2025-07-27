@@ -45,7 +45,6 @@ if uploaded_file:
         text=''.join(page.extract_text() for page in pdf.pages)
     
     st.subheader('Resume Preview')
-    st.write(text[:1000])
     cleaned=clean_text(text)
     sequence = tokenizer.texts_to_sequences([cleaned])
     padded = pad_sequences(sequence, maxlen=MAX_SEQ_LEN, padding='post', truncating='post')
@@ -60,7 +59,6 @@ if uploaded_file:
     else:
         st.warning(f'Candidate appears more suitable for {predicted_label} role')
 
-#extracting sections
 def extract_sections(text,section_list):
     sections={}
     pattern='|'.join([re.escape(s) for s in section_list])
