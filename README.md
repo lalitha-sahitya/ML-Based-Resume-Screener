@@ -5,7 +5,7 @@ This is a Streamlit app that uses a machine learning model to read resumes (PDFs
 You can:
 
 -Upload a resume
-
+ 
 -See the predicted job role
 
 -Compare it with a selected target role
