@@ -7,7 +7,7 @@ You can:
 -Upload a resume                                            
  
 -See the predicted job role
-
+            
 -Compare it with a selected target role
 
 -View important resume sections like Skills, Education, and Experience
